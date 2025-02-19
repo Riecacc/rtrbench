@@ -74,6 +74,16 @@ for INPUT_FILE in $MAPS_DIRECTORY/*; do
                     for WEIGHT in "${ALL_ASTAR_WEIGHTS[@]}"; do
                         for BIAS in "${ALL_GOAL_BIASES[@]}"; do
                             for ITERS in "${ALL_PP_ITERS[@]}"; do
+                                echo "Executing with parameters:"
+                                echo "  INPUT_FILE: $INPUT_FILE"
+                                echo "  PLANNER: $PLANNER"
+                                echo "  EPSILON: $EPSILON"
+                                echo "  RADIUS: $RADIUS"
+                                echo "  SAMPLE: $SAMPLE"
+                                echo "  WEIGHT: $WEIGHT"
+                                echo "  BIAS: $BIAS"
+                                echo "  ITERS: $ITERS"
+                                echo "----------------------------------------"
                                 execute "$INPUT_FILE" "$PLANNER" "$EPSILON" "$RADIUS" "$SAMPLE" "$WEIGHT" "$BIAS" "$ITERS" &
                             done
                         done

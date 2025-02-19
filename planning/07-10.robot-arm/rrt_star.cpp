@@ -57,6 +57,7 @@ std::vector<double*> RRTStar::query(double *startCfg, double *goalCfg) {
 
     std::vector<double*> path;  // Final path
 
+    // create root 
     tree.push_back(RRTStar_Vertice(startCfg, -1 /*parent*/, 0 /*cost*/));
     int samples = 0;
 
